@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: var(--font-inter);
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+  
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B5CF6;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A78BFA;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.7);
+}
+
+/* Page flip animation styles */
+@keyframes pageFlipDown {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(-8deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes pageFlipUp {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(8deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+
