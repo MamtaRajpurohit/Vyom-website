@@ -84,6 +84,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#8B5CF6" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        {/* Favicon: use primary logo PNG plus SVG fallback */}
+        <link rel="icon" href="/logo.png" type="image/png" sizes="64x64" />
+        <link rel="alternate icon" href="/publice/logo.png" type="image/svg+xml" />
       </head>
       <body>{children}</body>
     </html>
