@@ -21,7 +21,7 @@ export default function ContactCard({
 }: Props) {
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="w-full max-w-xl bg-black/80 border-4 border-[#7C2AE8] rounded-lg p-8 shadow-2xl text-center">
+      <div className="w-full max-w-xl bg-transparent border-4 border-[#7C2AE8] rounded-lg p-8 shadow-2xl text-center">
         <div className="space-y-6">
           <div className="space-y-2">
             <h3 className="text-xl font-semibold text-white/100">

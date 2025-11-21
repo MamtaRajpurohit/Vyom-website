@@ -19,7 +19,7 @@ export default function ContactMapBackdrop() {
         />
       </div>
       {/* subtle overlay for tint */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/10" />
     </div>
   );
 }
