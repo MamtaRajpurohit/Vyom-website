@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk} from 'next/font/google'
 import './globals.css'
 import StructuredData from './structured-data'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
-
+const spaceFont = Space_Grotesk({ 
+  subsets: ['latin'],
+  variable: '--font-space', 
+  display: 'swap',
+})
 export const metadata: Metadata = {
   title: {
     default: 'Vyom Voyage | TCET Space Club | CubeSat Development',
@@ -78,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={spaceFont.variable}>
       <head>
         <StructuredData />
         <meta name="theme-color" content="#8B5CF6" />

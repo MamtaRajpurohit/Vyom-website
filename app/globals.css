@@ -26,7 +26,6 @@
     text-wrap: balance;
   }
   
-  /* Performance optimizations */
   .will-change-transform {
     will-change: transform;
   }
@@ -42,7 +41,6 @@
   }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -79,7 +77,12 @@
   background: rgba(139, 92, 246, 0.7);
 }
 
-/* Page flip animation styles */
+.perspective-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+
 @keyframes pageFlipDown {
   0% {
     transform: rotateX(0deg);

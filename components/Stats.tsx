@@ -24,7 +24,7 @@ export default function Stats({ stats }: StatsProps) {
           <div className="text-2xl lg:text-3xl font-bold text-primary mb-1">
             {stat.value}
           </div>
-          <div className="text-white/70 text-sm">{stat.label}</div>
+          <div className="text-white/90 text-l">{stat.label}</div>
         </div>
       ))}
     </div>

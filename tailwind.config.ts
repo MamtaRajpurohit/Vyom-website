@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#8B5CF6',
+          DEFAULT: '#A080FF',
           dark: '#6D28D9',
           light: '#A78BFA',
         },
@@ -20,7 +20,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ['var(--font-space)', 'sans-serif'],
       },
     },
   },
