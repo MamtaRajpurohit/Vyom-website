@@ -375,118 +375,118 @@ export default function Home() {
                         </div>
                       </section>
                     )}
-                      {pageIndex === 4 && (
-                        <section id="team" className="h-screen w-screen relative" aria-label="Team">
-                          
-                          <div className="absolute inset-0 z-0">
-                            <img src="/star.gif" alt="Stars Background" className="w-full h-full object-cover" />
-                            <div className="absolute inset-0 bg-black/40"></div>
-                          </div>
-                          <div className="relative z-10 h-full">
-                            <PageContainer index={4} isActive={currentPage === 4}>
-                              <div className="h-full overflow-y-auto overflow-x-hidden custom-scrollbar">
-                                <div className="p-4 lg:p-8">
-                                  <div className="max-w-6xl w-full mx-auto space-y-12">
-                                    
-                                    <div className="text-center mb-8">
-                                      <h2 className="text-3xl lg:text-5xl font-bold text-primary">
-                                        THE CREW
-                                      </h2>
-                                    </div>
-
-                                    <div className="flex flex-col items-center">
-                                      <h3 className="text-2xl font-semibold text-primary mb-2 uppercase tracking-wider">Founder</h3>
-                                      <div className="p-6 bg-white/5 border border-primary/30 rounded-lg flex flex-col items-center text-center w-64 hover:scale-105 transition-all duration-300 backdrop-blur-sm hover:border-primary">
-                                        <div className="w-44 h-44 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary shadow-[0_0_15px_rgba(0,225,255,0.3)]">
-                                          <img 
-                                            src="/upkar.png" 
-                                            alt="Upkar Chaurasiya" 
-                                            className="w-full h-full object-cover"
-                                            onError={(e) => {
-                                              e.currentTarget.style.display = 'none';
-                                              e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full bg-primary flex items-center justify-center text-black font-bold text-2xl">UC</div>';
-                                            }}
-                                          />
-                                        </div>
-                                        <h4 className="text-xl font-bold text-white mb-1">Upkar Chaurasiya</h4>
-                                        <p className="text-primary font-medium text-sm">Founder</p>
-                                      </div>
-                                    </div>
-                                    <div>
-                                      <h3 className="text-2xl font-semibold text-primary mb-6 text-center lg:text-left uppercase tracking-wider">Core Team</h3>
-                                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                        {[
-                                          { name: 'Chetas Khadse', role: 'Team Lead', image: '/chetas.jpg' },
-                                          { name: 'Ahad Bhati', role: 'Head of Operations', image: '/ahad.png' },
-                                          { name: 'Rohan Dol', role: 'Software Lead', image: '/rohan.jpg' },
-                                          { name: 'Gagandeep Bhakuni', role: 'Finance Coordinator', image: '/gagandeep.jpg' },
-                                          { name: 'Krishna Bitthariya', role: 'Embedded Systems Lead', image: '/krishna.jpg' },
-                                          { name: 'Laxmi Mehta', role: 'Design Lead', image: '/laxmi.png' },
-                                        ].map((member, index) => (
-                                          <div
-                                            key={index}
-                                            className="p-5 bg-white/5 border border-white/10 rounded-lg hover:border-primary/50 transition-all hover:scale-105 text-center group backdrop-blur-sm"
-                                          >
-                                            <div className="w-36 h-36 mx-auto mb-3 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors duration-300">
-                                              <img 
-                                                src={member.image}
-                                                alt={member.name}
-                                                className="w-full h-full object-cover"
-                                                onError={(e) => {
-                                                  e.currentTarget.style.display = 'none';
-                                                  e.currentTarget.parentElement!.classList.add('bg-white/10', 'flex', 'items-center', 'justify-center');
-                                                  e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-bold text-primary">${member.name.charAt(0)}</span>`;
-                                                }}
-                                              />
-                                            </div>
-                                            <h4 className="text-lg font-bold text-white mb-1">{member.name}</h4>
-                                            <p className="text-primary text-sm font-medium mb-1">{member.role}</p>
-                                          </div>
-                                        ))}
-                                      </div>
-                                    </div>
-                                    <div>
-                                      <h3 className="text-2xl font-semibold text-primary mb-6 text-center lg:text-left uppercase tracking-wider">Faculty Advisors</h3>
-                                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                        {[
-                                          { name: 'Dr. Payel Saha', role: 'Faculty Mentor', designation: 'HoD E&TC, TCET', image: '/payel.jpg' },
-                                          { name: 'Dr. Vinitkumar Dongre', role: 'Faculty Mentor', designation: 'Dean R&D, TCET', image: '/vinit.jpg' },
-                                          { name: 'Dr. Shailendra Shastri', role: 'Faculty Advisor', designation: 'Associate Professor E&TC', image: '/shailendra.jpg' },
-                                          { name: 'Ms. Purnima Chandrasekar', role: 'Faculty Advisor', designation: 'Associate Professor E&TC', image: '/purnima.jpg' },
-                                          { name: 'Mrs. Archana Deshpande', role: 'Faculty Advisor', designation: 'Associate Professor E&TC', image: '/archana.jpg' },
-                                        ].map((member, index) => (
-                                          <div
-                                            key={index}
-                                            className="p-5 bg-white/5 border border-white/10 rounded-lg text-center hover:border-primary/50 transition-colors group backdrop-blur-sm"
-                                          >
-                                            <div className="w-32 h-32 mx-auto mb-3 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors duration-300">
-                                              <img 
-                                                src={member.image}
-                                                alt={member.name}
-                                                className="w-full h-full object-cover"
-                                                onError={(e) => {
-                                                  e.currentTarget.style.display = 'none';
-                                                  e.currentTarget.parentElement!.classList.add('bg-white/10', 'flex', 'items-center', 'justify-center');
-                                                  e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-bold text-white/80">${member.name.charAt(0)}</span>`;
-                                                }}
-                                              />
-                                            </div>
-                                            
-                                            <h4 className="text-base font-bold text-white mb-1">{member.name}</h4>
-                                            <p className="text-primary/80 text-sm mb-1">{member.role}</p>
-                                            <p className="text-xs text-white/50 max-w-[200px] mx-auto">{member.designation}</p>
-                                          </div>
-                                        ))}
-                                      </div>
-                                    </div>
-
+                    {pageIndex === 4 && (
+                      <section id="team" className="h-screen w-screen relative" aria-label="Team">
+                        <div className="absolute inset-0 z-0">
+                          <img src="/star.gif" alt="Stars Background" className="w-full h-full object-cover" />
+                          <div className="absolute inset-0 bg-black/40"></div>
+                        </div>
+                        <div className="relative z-10 h-full">
+                          <PageContainer index={4} isActive={currentPage === 4}>
+                            <div className="h-full overflow-y-auto overflow-x-hidden custom-scrollbar">
+                              <div className="p-4 lg:p-8">
+                                <div className="max-w-6xl w-full mx-auto space-y-12">
+                                  
+                                  <div className="text-center mb-8">
+                                    <h2 className="text-3xl lg:text-5xl font-bold text-primary">
+                                      THE CREW
+                                    </h2>
                                   </div>
+
+                                  <div className="flex flex-col items-center">
+                                    <h3 className="text-2xl font-semibold text-primary mb-2 uppercase tracking-wider">Founder</h3>
+                                    <div className="p-6 bg-white/5 border border-primary/30 rounded-lg flex flex-col items-center text-center w-64 hover:scale-105 transition-all duration-300 backdrop-blur-sm hover:border-primary">
+                                      <div className="w-44 h-44 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary shadow-[0_0_15px_rgba(0,225,255,0.3)]">
+                                        <img 
+                                          src="/upkar.png" 
+                                          alt="Upkar Chaurasiya" 
+                                          className="w-full h-full object-cover"
+                                          onError={(e) => {
+                                            e.currentTarget.style.display = 'none';
+                                            e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full bg-primary flex items-center justify-center text-black font-bold text-2xl">UC</div>';
+                                          }}
+                                        />
+                                      </div>
+                                      <h4 className="text-xl font-bold text-white mb-1">Upkar Chaurasiya</h4>
+                                      <p className="text-primary font-medium text-sm">Founder</p>
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <h3 className="text-2xl font-semibold text-primary mb-6 text-center lg:text-left uppercase tracking-wider">Core Team</h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                      {[
+                                        { name: 'Chetas Khadse', role: 'Team Lead', image: '/chetas.jpg' },
+                                        { name: 'Ahad Bhati', role: 'Head of Operations', image: '/ahad.png' },
+                                        { name: 'Rohan Dol', role: 'Software Lead', image: '/rohan.jpg' },
+                                        { name: 'Gagandeep Bhakuni', role: 'Finance Coordinator', image: '/gagandeep.jpg' },
+                                        { name: 'Krishna Bitthariya', role: 'Embedded Systems Lead', image: '/krishna.jpg' },
+                                        { name: 'Laxmi Mehta', role: 'Design Lead', image: '/laxmi.png' },
+                                      ].map((member, index) => (
+                                        <div
+                                          key={index}
+                                          className="p-5 bg-white/5 border border-white/10 rounded-lg hover:border-primary/50 transition-all hover:scale-105 text-center group backdrop-blur-sm"
+                                        >
+                                          <div className="w-36 h-36 mx-auto mb-3 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors duration-300">
+                                            <img 
+                                              src={member.image}
+                                              alt={member.name}
+                                              className="w-full h-full object-cover"
+                                              onError={(e) => {
+                                                e.currentTarget.style.display = 'none';
+                                                e.currentTarget.parentElement!.classList.add('bg-white/10', 'flex', 'items-center', 'justify-center');
+                                                e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-bold text-primary">${member.name.charAt(0)}</span>`;
+                                              }}
+                                            />
+                                          </div>
+                                          <h4 className="text-lg font-bold text-white mb-1">{member.name}</h4>
+                                          <p className="text-primary text-sm font-medium mb-1">{member.role}</p>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <h3 className="text-2xl font-semibold text-primary mb-6 text-center lg:text-left uppercase tracking-wider">Faculty Advisors</h3>
+                                    
+                                    <div className="flex flex-wrap justify-center gap-6">
+                                      {[
+                                        { name: 'Dr. Payel Saha', role: 'Faculty Mentor', designation: 'HoD E&TC, TCET', image: '/payel.jpg' },
+                                        { name: 'Dr. Vinitkumar Dongre', role: 'Faculty Mentor', designation: 'Dean R&D, TCET', image: '/vinit.jpg' },
+                                        { name: 'Dr. Shailendra Shastri', role: 'Faculty Advisor', designation: 'Associate Professor E&TC', image: '/shailendra.jpg' },
+                                        { name: 'Ms. Purnima Chandrasekar', role: 'Faculty Advisor', designation: 'Associate Professor E&TC', image: '/purnima.jpg' },
+                                        { name: 'Mrs. Archana Deshpande', role: 'Faculty Advisor', designation: 'Associate Professor E&TC', image: '/archana.jpg' },
+                                      ].map((member, index) => (
+                                        <div
+                                          key={index}
+                                          className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] p-5 bg-white/5 border border-white/10 rounded-lg text-center hover:border-primary/50 transition-colors group backdrop-blur-sm"
+                                        >
+                                          <div className="w-32 h-32 mx-auto mb-3 rounded-full overflow-hidden border border-white/20 group-hover:border-primary transition-colors duration-300">
+                                            <img 
+                                              src={member.image}
+                                              alt={member.name}
+                                              className="w-full h-full object-cover"
+                                              onError={(e) => {
+                                                e.currentTarget.style.display = 'none';
+                                                e.currentTarget.parentElement!.classList.add('bg-white/10', 'flex', 'items-center', 'justify-center');
+                                                e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-bold text-white/80">${member.name.charAt(0)}</span>`;
+                                              }}
+                                            />
+                                          </div>
+                                          
+                                          <h4 className="text-base font-bold text-white mb-1">{member.name}</h4>
+                                          <p className="text-primary/80 text-sm mb-1">{member.role}</p>
+                                          <p className="text-xs text-white/50 max-w-[200px] mx-auto">{member.designation}</p>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+
                                 </div>
                               </div>
-                            </PageContainer>
-                          </div>
-                        </section>
-                      )}
+                            </div>
+                          </PageContainer>
+                        </div>
+                      </section>
+                    )}
               {pageIndex === 5 && (
                 <section id="updates" className="h-screen w-screen relative" aria-label="Mission Logs and Updates">
                   
