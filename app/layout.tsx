@@ -87,11 +87,18 @@ export default function RootLayout({
         <meta name="theme-color" content="#8B5CF6" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        {/* Favicon: use primary logo PNG plus SVG fallback */}
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#8B5CF6" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Favicon */}
         <link rel="icon" href="/logo.png" type="image/png" sizes="64x64" />
-        <link rel="alternate icon" href="/publice/logo.png" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/logo.png" />
       </head>
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }
